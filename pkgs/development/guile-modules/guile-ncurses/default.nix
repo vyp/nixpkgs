@@ -1,14 +1,15 @@
 { stdenv, fetchurl, pkgconfig, guile, ncurses, libffi }:
 
 let
-  name = "guile-ncurses-${version}";
-  version = "1.7";
+  name = "${pname}-${version}";
+  pname = "guile-ncurses";
+  version = "2.2";
 in stdenv.mkDerivation {
   inherit name;
 
   src = fetchurl {
-    url = "mirror://gnu/guile-ncurses/${name}.tar.gz";
-    sha256 = "153vv75gb7l62sp3666rc97i63rnaqbx2rjar7d9b5w81fhwv4r5";
+    url = "mirror://gnu/${pname}/${name}.tar.gz";
+    sha256 = "1wvggbr4xv8idh1hzd8caj4xfp4pln78a7w1wqzd4zgzwmnzxr2f";
   };
 
   nativeBuildInputs = [ pkgconfig ];
