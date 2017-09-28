@@ -6743,7 +6743,9 @@ with pkgs;
 
   guile-lib = callPackage ../development/guile-modules/guile-lib { };
 
-  guile-ncurses = callPackage ../development/guile-modules/guile-ncurses { };
+  guile-ncurses = callPackage ../development/guile-modules/guile-ncurses {
+    guile = guile_2_0;
+  };
 
   guile-opengl = callPackage ../development/guile-modules/guile-opengl { };
 
