@@ -14059,6 +14059,8 @@ in
 
   termbox = callPackage ../development/libraries/termbox { };
 
+  termbox_next = callPackage ../development/libraries/termbox_next { };
+
   tevent = callPackage ../development/libraries/tevent {
     python = python2;
   };
